@@ -2,7 +2,7 @@ import gspread
 import streamlit as st
 from google.oauth2.service_account import Credentials
 
-def get_worksheet(worksheet='Wheel of Life'):
+def get_worksheet(worksheet='RE_ACT - Wheel of Life'):
     scopes = [
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive"
