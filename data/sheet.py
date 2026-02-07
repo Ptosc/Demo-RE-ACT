@@ -2,18 +2,6 @@ import gspread
 import streamlit as st
 from google.oauth2.service_account import Credentials
 
-# def get_worksheet(worksheet='Tabellenblatt1'):
-#     scopes = [
-#         "https://www.googleapis.com/auth/spreadsheets",
-#         "https://www.googleapis.com/auth/drive"
-#     ]
-#     creds = Credentials.from_service_account_info(
-#         st.secrets['gcp_service_account'],
-#         scopes=scopes
-#     )
-#     client = gspread.authorize(creds)
-
-#     return client.open("Demo RE:ACT").worksheet(worksheet)
 def get_worksheet(worksheet='Tabellenblatt1'):
     scopes = [
         "https://www.googleapis.com/auth/spreadsheets",

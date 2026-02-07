@@ -36,9 +36,9 @@ def need_update(values):
     latest_update_time = datetime.strptime(time_str, "%d.%m.%Y %H:%M:%S")
     return latest_update_time.month != datetime.now().month
 
-def prep_sheet(name='Wheel of Life'):
+def prep_sheet():
     # ------- sheet vorbereiten -------
-    sheet = get_worksheet(name)
+    sheet = get_worksheet()
     data = sheet.get_all_values()
     # verhindert IndexError, wenn liste leer ist
     if data: 
