@@ -52,7 +52,8 @@ Sondern: „Was passt jetzt gerade?“
 
 ---
 
-## Installation
+## Streamlit-App-Link
 
-```bash
-pip install -r requirements.txt
+https://demo-re-act-fvnzda2mgdbfg2efwb2nzz.streamlit.app
+
+⚠️ Hinweis: Die App läuft auf Streamlit Cloud und kann nach einer Inaktivitätsphase „einschlafen“. Beim ersten Laden kann es daher ein paar Sekunden dauern, bis sie wieder reagiert.

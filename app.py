@@ -11,18 +11,10 @@ st.set_page_config(
 )
 
 def init_score_state(latest_row):
-    if latest_row and len(latest_row) > 1:
-        latest_values = latest_row[1:]
+    latest_values = latest_row[1:] if latest_row and len(latest_row) > 1 else []
+    for i, key in enumerate(WHEEL_AREAS):
+        st.session_state.setdefault(key, int(latest_values[i]) if i < len(latest_values) and latest_values[i].isdigit() else 3)
 
-        for i, key in enumerate(WHEEL_AREAS):
-            if key not in st.session_state:
-                try:
-                    st.session_state[key] = int(latest_values[i])
-                except (IndexError, ValueError):
-                    st.session_state[key] = 3
-    else:
-        for key in WHEEL_AREAS:
-            st.session_state.setdefault(key, 3)
 
 def need_update(values):
     """
@@ -158,7 +150,6 @@ with tab2:
             label=area,
             min_value=1,
             max_value=10,
-            value=st.session_state[area],
             key=area
         )
 
