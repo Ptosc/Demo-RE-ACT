@@ -12,4 +12,4 @@ def get_worksheet(worksheet='Wheel of Life'):
         scopes=scopes
     )
     client = gspread.authorize(creds)
-    return client.open("RE:ACT").worksheet(worksheet)
+    return client.open("Demo RE:ACT").worksheet(worksheet)
